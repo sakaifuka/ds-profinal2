@@ -192,3 +192,49 @@ con.commit()
 
 # 6．DBへの接続を閉じる
 con.close()
+
+# 1．DBに接続する
+con = sqlite3.connect(path + db_name)
+# print(type(con))
+
+# 2．SQLを実行するためのオブジェクトを取得
+cur = con.cursor()
+
+# 3．SQLを用意
+# SELECT * FROM テーブル名;
+# *の部分は取得したい列の名前をカンマ区切りで指定することもできる
+sql_select = 'SELECT * FROM windows;'
+
+# 4．SQLを実行
+cur.execute(sql_select)
+
+for r in cur:
+  print(r)
+
+#コミット処理
+con.commit()
+# 6．DBへの接続を閉じる
+con.close()
+
+# 1．DBに接続する
+con = sqlite3.connect(path + db_name)
+# print(type(con))
+
+# 2．SQLを実行するためのオブジェクトを取得
+cur = con.cursor()
+
+# 3．SQLを用意
+# SELECT * FROM テーブル名;
+# *の部分は取得したい列の名前をカンマ区切りで指定することもできる
+sql_select = 'SELECT * FROM mac;'
+
+# 4．SQLを実行
+cur.execute(sql_select)
+
+for r in cur:
+  print(r)
+
+#コミット処理
+con.commit()
+# 6．DBへの接続を閉じる
+con.close()
