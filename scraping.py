@@ -18,9 +18,48 @@ con = sqlite3.connect(path + db_name)
 # DBへの接続を閉じる
 con.close()
 
+# 1．DBに接続する
+con = sqlite3.connect(path + db_name)
+# print(type(con))
+
+# 2．SQLを実行するためのオブジェクトを取得
+cur = con.cursor()
+
+# 3．実行したいSQLを用意する
+# テーブルを作成するSQL
+# CREATE TABLE テーブル名（カラム名 型，...）;
+sql_create_table_git = 'CREATE TABLE git(id int, windows int);'
+#sql_create_table_git2 = 'CREATE TABLE git2(id int, mac int);'
+# 4．SQLを実行する
+cur.execute(sql_create_table_git)
+
+# 5．必要があればコミットする（データ変更等があった場合）
+con.commit()
+
+# 6．DBへの接続を閉じる
+con.close()
 
 
+# 1．DBに接続する
+con = sqlite3.connect(path + db_name)
+# print(type(con))
 
+# 2．SQLを実行するためのオブジェクトを取得
+cur = con.cursor()
+
+# 3．実行したいSQLを用意する
+# テーブルを作成するSQL
+# CREATE TABLE テーブル名（カラム名 型，...）;
+#sql_create_table_git = 'CREATE TABLE git(id int, windows int);'
+sql_create_table_git2 = 'CREATE TABLE git2(id int, mac int);'
+# 4．SQLを実行する
+cur.execute(sql_create_table_git2)
+
+# 5．必要があればコミットする（データ変更等があった場合）
+con.commit()
+
+# 6．DBへの接続を閉じる
+con.close()
 
 
 
