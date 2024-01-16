@@ -1,2 +1,7 @@
 # OSやエディタなどが自動で作成するファイル
 .DS_Store
+ add-final
+*.sqlite
+
+
+ main

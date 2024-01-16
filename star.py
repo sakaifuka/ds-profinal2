@@ -1,3 +1,32 @@
+ add-final
+import sqlite3
+
+
+# DBファイルを保存するためのファイルパス
+
+# Google Colab
+#path = '/content/'
+
+# ローカル（自分のMac）
+path = '/Users/fukasakai/ds-profinal/scraping.py'
+
+# DBファイル名
+db_name = 'scraping.sqlite'
+
+# DBに接続する（指定したDBファイル存在しない場合は，新規に作成される）
+con = sqlite3.connect(path + db_name)
+
+# DBへの接続を閉じる
+con.close()
+
+
+
+
+
+
+
+
+ main
 from bs4 import BeautifulSoup
 import requests
 import time
